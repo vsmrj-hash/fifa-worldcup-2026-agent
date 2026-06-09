@@ -17,9 +17,7 @@ const config = {
   PIXABAY_API_KEY: process.env.PIXABAY_API_KEY,
 
   STABILITY_API_KEY: process.env.STABILITY_API_KEY,
-  NEWS_API_KEY: process.env.NEWS_API_KEY,
 
-  ELEVENLABS_API_KEY: process.env.ELEVENLABS_API_KEY,
   OPENAI_API_KEY: process.env.OPENAI_API_KEY,
 
   SCHEDULE_CRON: process.env.SCHEDULE_CRON || '0 12 * * *',
@@ -40,8 +38,8 @@ function validateRequired() {
   if (errors.length) {
     console.error('\n[config] Missing required environment variables:');
     errors.forEach(e => console.error(`  - ${e}`));
-    console.error('\nCopy .env.example to .env and fill in your keys.');
-    console.error('Then run: node setup.js  (one-time YouTube auth)\n');
+    console.error('\nCopy scripts/fifa/.env.example to scripts/fifa/.env and fill in your keys.');
+    console.error('Then run: node scripts/fifa/setup.js  (one-time YouTube auth)\n');
     process.exit(1);
   }
 }
